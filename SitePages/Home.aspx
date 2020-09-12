@@ -33,7 +33,8 @@
 	</asp:Content>
 
 	<asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
-		<div class="result_div"></div>
+		<div class="result_Link_div"></div>
+		<div class="result_Carousel_div"></div>
 		<script type="text/javascript" src="../SiteAssets/jquery.getlist.js"></script>
 		<script type="text/javascript" src="../SiteAssets/jquery.carousel.js"></script>
 	</asp:Content>

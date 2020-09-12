@@ -1,6 +1,8 @@
 $('#DeltaPageStatusBar').css('display', 'none');
 
-function getMyListData(handleData)
+getLinkData();
+
+function getLinkData()
 {
     var urls = window.location.pathname;
     var myPageName = urls.substring(urls.lastIndexOf('/') + 1).split(".",1)[0];
@@ -39,27 +41,16 @@ function getMyListData(handleData)
             });
 
             var resultJson = groupBy(myjson, "Category");
+            console.log(resultJson);
+            for(result in resultJson) {
+                var str="<div class='CategoryList' name="+result+"><h3>"+result+"</h3><ul>";
 
-            query = "<Query><Where></Where></Query>";
-            $().SPServices
-            ({
-                operation: method,
-                async: false,
-                webURL: webURL,
-                listName: 'Carousel',
-                CAMLViewFields: "<ViewFields Properties='True' />",
-                CAMLQuery: query,
-                completefunc: function (xData, Status)
-                {
-                    myjson = $(xData.responseXML).SPFilterNode("z:row").SPXmlToJson({
-                        mapping: {
-                            ows_Target_x0020_URL: {mappedName: "TargetURL", objectType: "URL"},
-                            ows_BackgroundImage: {mappedName: "ImageFile", objectType: "URL"},
-                        }   // name, mappedName, objectType
-                    });
-                    handleData(resultJson, myjson);
+                for(item in resultJson[result]){
+                    str += "<li>" + resultJson[result][item].Title + ":  <a href='" + resultJson[result][item].Url.Url + "'>" + resultJson[result][item].Url.Description + "</a></li>";
                 }
-            });
+                str+="</ul></div>";
+                $(".result_Link_div").append(str);
+            }
         }
     });
 };
