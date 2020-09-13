@@ -39,24 +39,13 @@ Then the dropdown menu shows list as the div "id".
 <script type="text/javascript" src="../SiteAssets/jquery.filter.js"></script>
 
 <div class="filter_div">
-
-    <div class="filter_child" id="Department A">
-        <div>
-            <h1>Department A</h1>
-            <span style="color:navy">This is the content of Department A</span>
-        </div>
+    <div class="filter_child" id="Department A"> // id: the name shown in dropdown menu
+        // your code here
     </div>
-    <div class="filter_child" id="Department B">
-        <div>
-            <h1>Department B</h1>
-            <span style="color:navy">This is the content of Department B</span>
-        </div>
+    <div class="filter_child" id="Department B">// id: the name shown in dropdown menu
+        // your code here
     </div>
-    <div class="filter_child" id="Department C">
-        <div>
-            <h1>Department C</h1>
-            <span style="color:navy">This is the content of Department C</span>
-        </div>
+    <div class="filter_child" id="Department C">// id: the name shown in dropdown menu
+        // your code here
     </div>
-
 </div>
