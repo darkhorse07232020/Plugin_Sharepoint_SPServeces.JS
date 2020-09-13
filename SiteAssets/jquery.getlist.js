@@ -1,5 +1,3 @@
-$('#DeltaPageStatusBar').css('display', 'none');
-
 getLinkData();
 
 function getLinkData()

@@ -1,5 +1,3 @@
-$('#DeltaPageStatusBar').css('display', 'none');
-
 getCarouselData();
 
 function getCarouselData()

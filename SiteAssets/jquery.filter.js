@@ -1,5 +1,3 @@
-$('#DeltaPageStatusBar').css('display', 'none');
-
 function getFilterSelect() {
 	var str = "<select id = 'departmentSel' onchange='filterDepartment()'>";
 	$(".filter_div").find(".filter_child").each( function() {
