@@ -41,12 +41,12 @@ function getLinkData()
             });
 
             var resultJson = groupBy(myjson, "Category");
-            console.log(resultJson);
+
             for(result in resultJson) {
                 var str="<div class='CategoryList' name="+result+"><h3>"+result+"</h3><ul>";
 
                 for(item in resultJson[result]){
-                    str += "<li>" + resultJson[result][item].Title + ":  <a href='" + resultJson[result][item].Url.Url + "'>" + resultJson[result][item].Url.Description + "</a></li>";
+                    str += "<li>" + resultJson[result][item].Title + ":  <a href='" + resultJson[result][item].Url.Url + "' target='_blank'>" + resultJson[result][item].Url.Description + "</a></li>";
                 }
                 str+="</ul></div>";
                 $(".result_Link_div").append(str);

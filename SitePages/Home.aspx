@@ -33,8 +33,42 @@
 	</asp:Content>
 
 	<asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
+		<!-- show Link -->
 		<div class="result_Link_div"></div>
-		<div class="result_Carousel_div"></div>
 		<script type="text/javascript" src="../SiteAssets/jquery.getlist.js"></script>
+
+		<hr>
+		<!-- show Carousel -->
+		<div class="result_Carousel_div"></div>
+
 		<script type="text/javascript" src="../SiteAssets/jquery.carousel.js"></script>
+
+		<hr>
+		<!-- show Filter -->
+		<div class="custom-select"></div>
+
+		<script type="text/javascript" src="../SiteAssets/jquery.filter.js"></script>
+
+		<div class="filter_div">
+
+			<div class="filter_child" id="Department A">
+				<div>
+					<h1>Department A</h1>
+					<span style="color:navy">This is the content of Department A</span>
+				</div>
+			</div>
+			<div class="filter_child" id="Department B">
+				<div>
+					<h1>Department B</h1>
+					<span style="color:navy">This is the content of Department B</span>
+				</div>
+			</div>
+			<div class="filter_child" id="Department C">
+				<div>
+					<h1>Department C</h1>
+					<span style="color:navy">This is the content of Department C</span>
+				</div>
+			</div>
+
+		</div>
 	</asp:Content>
