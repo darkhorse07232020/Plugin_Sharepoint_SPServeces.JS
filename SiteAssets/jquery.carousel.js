@@ -29,8 +29,6 @@ function getCarouselData()
 	        var str =`<div class='Category' name=`+result+` data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>`;
 
 	        for(item in myjson){
-
-	            // console.log(imageFile);
 	            str+="<div class='container'><a href='" + myjson[item].TargetURL.Url + "' target='_blank'>" +
 	                "<img src='" + myjson[item].ImageFile.Url + "' width='300px' />" + "<h1 class='centered'>" + myjson[item].Description + "</h1></a></div>";
 	        }
