@@ -11,6 +11,8 @@ function getFilterSelect() {
 	$('.custom-select').append(str);
 
 	$('#departmentSel').val(getCookie("filterDepartment"));
+
+	checkCookie();
 }
 
 function filterDepartment() {
@@ -26,6 +28,8 @@ function filterDepartment() {
 	});
 
 	setCookie("filterDepartment", filter, 365);
+
+	checkCookie();
 }
 
 function setCookie(cname,cvalue,exdays) {
@@ -51,7 +55,20 @@ function getCookie(cname) {
 	return "";
 }
 
+function checkCookie() {
+	var filter = getCookie("filterDepartment");
+
+	if (filter =="" || filter == "null" || filter == null) {
+		$('#departmentSel').show();
+	}
+	else {
+		$('#departmentSel').hide();
+	}
+}
+
 $(document).ready(function() {
+
+	checkCookie();
 
 	getFilterSelect();
 
